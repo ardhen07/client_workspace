@@ -10781,7 +10781,7 @@ body {
         flex-direction: row;
         align-items: center; } }
   .az-header-menu .nav-item::before {
-    content: '';
+   
     position: absolute;
     top: 67px;
     margin-left: 25px;
@@ -11563,7 +11563,7 @@ body {
       visibility: visible; } }
 
 .az-navbar-backdrop {
-  position: fixed;
+  
   top: 0;
   left: 0;
   right: 0;
