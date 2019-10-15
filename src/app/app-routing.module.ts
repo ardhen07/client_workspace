@@ -7,6 +7,12 @@ const routes: Routes = [
   { path: 'vehicle-info', loadChildren: './vehicle-info/vehicle-info.module#VehicleInfoPageModule' },
   { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './auth/register/register.module#RegisterPageModule' },
+  { path: 'add-vehicle-info', loadChildren: './vehicle-info/add-vehicle-info/add-vehicle-info.module#AddVehicleInfoPageModule' },
+  { path: 'header', loadChildren: './common/header/header.module#HeaderPageModule' },
+  { path: 'channel-partner', loadChildren: './channel-partner/channel-partner.module#ChannelPartnerPageModule' },
+  { path: 'customer', loadChildren: './customer/customer.module#CustomerPageModule' },
+  { path: 'employee', loadChildren: './employee/employee.module#EmployeePageModule' },
+  { path: 'user-group', loadChildren: './user-group/user-group.module#UserGroupPageModule' },
 ];
 
 @NgModule({

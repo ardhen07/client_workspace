@@ -6,8 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { VehicleInfoPage } from './vehicle-info.page';
-import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
+import { MatInputModule, MatPaginatorModule, 
+  MatProgressSpinnerModule, 
   MatSortModule, MatTableModule } from "@angular/material";
+  import {MatIconModule} from '@angular/material/icon';
+  import {MatMenuModule} from '@angular/material/menu';
+  import { HeaderPage } from '../common/header/header.page';
 const routes: Routes = [
   {
     path: '',
@@ -25,10 +29,14 @@ const routes: Routes = [
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatProgressSpinnerModule,   
-
+    MatIconModule,
+    MatMenuModule,
+    MatProgressSpinnerModule,
+   
     RouterModule.forChild(routes)
   ],
-  declarations: [VehicleInfoPage]
+  exports:[HeaderPage],
+  entryComponents: [HeaderPage],
+  declarations: [VehicleInfoPage,HeaderPage]
 })
 export class VehicleInfoPageModule {}
