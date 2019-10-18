@@ -1,9 +1,83 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>user-group</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content center text-center padding>
+      <h2>User Group</h2>
+      <hr class="mg-y-30">
+      <ion-card>
+        <ion-card-content>
+    <form>
+        <ion-grid>
+            <ion-row center>
+                  <ion-col>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Name <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+            </ion-row>
+            <ion-row center>
+                <ion-col>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Project<ion-text color="danger">*</ion-text></ion-label>
+          <ion-select interface="popover">
+              <ion-select-option value="2019">2019</ion-select-option>
+              <ion-select-option value="2018">2018</ion-select-option>
+              <ion-select-option value="2017">2017</ion-select-option>
+              <ion-select-option value="2016">2016</ion-select-option>
+              <ion-select-option value="2015">2015</ion-select-option>
+              <ion-select-option value="2014">2014</ion-select-option>
+            </ion-select>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+      
+       <ion-col>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">User Group Category<ion-text color="danger">*</ion-text></ion-label>
+          <ion-select interface="popover">
+              <ion-select-option value="2019">2019</ion-select-option>
+              <ion-select-option value="2018">2018</ion-select-option>
+              <ion-select-option value="2017">2017</ion-select-option>
+              <ion-select-option value="2016">2016</ion-select-option>
+              <ion-select-option value="2015">2015</ion-select-option>
+              <ion-select-option value="2014">2014</ion-select-option>
+            </ion-select>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+      </ion-row>
+      <ion-row center>
+          <ion-col>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Reseller<ion-text color="danger">*</ion-text></ion-label>
+          <ion-select interface="popover">
+              <ion-select-option value="2019">2019</ion-select-option>
+              <ion-select-option value="2018">2018</ion-select-option>
+              <ion-select-option value="2017">2017</ion-select-option>
+              <ion-select-option value="2016">2016</ion-select-option>
+              <ion-select-option value="2015">2015</ion-select-option>
+              <ion-select-option value="2014">2014</ion-select-option>
+            </ion-select>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+     
+                    </ion-row>
+                </ion-grid>
+                <ion-button  (click)="open(content)">Save</ion-button>
+    </form>
+    </ion-card-content>
+    </ion-card>
+  
+  </ion-content>
+  

@@ -5,14 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ChannelPartnerPage } from './channel-partner.page';
+import { AccountSettingsPage } from './account-settings.page';
 
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
 const routes: Routes = [
   {
     path: '',
-    component: ChannelPartnerPage
+    component: AccountSettingsPage
   }
 ];
 
@@ -21,11 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    MatIconModule,
-    MatMenuModule,
     RouterModule.forChild(routes)
   ],
-  entryComponents:[],
-  declarations: [ChannelPartnerPage,]
+  declarations: [AccountSettingsPage]
 })
-export class ChannelPartnerPageModule {}
+export class AccountSettingsPageModule {}

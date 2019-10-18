@@ -64,6 +64,9 @@ export class VehicleInfoPage implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+  vehicle_info(){
+    this.router.navigate(['/vehicle-info']);
+  }
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content center text-center padding>
+      <h2>Account Settings</h2>
+      <hr class="mg-y-30">
+      <ion-card>
+        <ion-card-content>
+    <form>
+        <ion-grid>
+            <ion-row center>
+                  <ion-col>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">User Name <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+            </ion-row>
+            <ion-row center>
+                <ion-col>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="password" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+      
+       <ion-col>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Retype Password<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="password" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+      </ion-row>
+      
+                </ion-grid>
+                <ion-button  (click)="open(content)">Save</ion-button>
+    </form>
+    </ion-card-content>
+    </ion-card>
+  
+  </ion-content>
+  

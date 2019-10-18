@@ -8,7 +8,8 @@ import { IonicModule } from '@ionic/angular';
 import { AddVehicleInfoPage } from './add-vehicle-info.page';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
-
+import { MaterialModule } from '../../material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 const routes: Routes = [
   {
     path: '',
@@ -23,6 +24,8 @@ const routes: Routes = [
     IonicModule,
     MatIconModule,
     MatMenuModule,
+    MaterialModule,
+    HttpClientModule,
     RouterModule.forChild(routes)
   ],
   // entryComponents: [HeaderPage],

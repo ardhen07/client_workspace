@@ -47,14 +47,14 @@
               </nav> -->
               <button mat-icon-button [matMenuTriggerFor]="menu_1" aria-label="Example icon-button with a menu">
                     
-                  <a  href="" class="nav-link with-sub"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;App Config</a>
+                  <a  class="nav-link with-sub"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;App Config</a>
                 </button>
                 <mat-menu #menu_1="matMenu">
                   <button mat-menu-item (click)="vehicle_info()">
                     <mat-icon>account_circle</mat-icon>
                     <span>Customer</span>
                   </button>
-                  <button mat-menu-item  (click)="cus()">
+                  <button mat-menu-item >
                     <mat-icon>commute</mat-icon>
                     <span>Vehicle</span>
                   </button>
@@ -205,6 +205,4 @@
     </div><!-- az-header -->
 </ion-header>
 
-<ion-content>
-    
-</ion-content>
+

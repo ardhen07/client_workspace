@@ -23,7 +23,12 @@ import { HeaderPage } from '../common/header/header.page';
       }
     ])
   ],
+  exports: [HeaderPage],
   entryComponents: [HeaderPage],
   declarations: [HomePage,HeaderPage]
 })
-export class HomePageModule {}
+export class HomePageModule {
+
+
+
+}

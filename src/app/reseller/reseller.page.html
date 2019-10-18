@@ -18,7 +18,7 @@
           <ul class="nav">
             <li class="nav-item">
                 <button >
-                    <a href="/home" class="nav-link with-sub"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Dashboard</a>
+                    <a  class="nav-link with-sub"><i class="fa fa-home" aria-hidden="true"></i>&nbsp;Dashboard</a>
                 </button>
                   
                   <!-- <div class="az-menu-sub">
@@ -47,18 +47,18 @@
               </nav> -->
               <button mat-icon-button [matMenuTriggerFor]="menu_1" aria-label="Example icon-button with a menu">
                     
-                  <a  href="" class="nav-link with-sub"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;App Config</a>
+                  <a   class="nav-link with-sub"><i class="fa fa-cog" aria-hidden="true"></i>&nbsp;App Config</a>
                 </button>
                 <mat-menu #menu_1="matMenu">
-                  <button mat-menu-item (click)="vehicle_info()">
+                  <button mat-menu-item (click)="customer()">
                     <mat-icon>account_circle</mat-icon>
                     <span>Customer</span>
                   </button>
-                  <button mat-menu-item  (click)="cus()">
+                  <button mat-menu-item (click)="vehicleInfo()">
                     <mat-icon>commute</mat-icon>
                     <span>Vehicle</span>
                   </button>
-                  <button mat-menu-item>
+                  <button mat-menu-item (click)="employee()">
                     <mat-icon>directions_bike</mat-icon>
                     <span>Employee</span>
                   </button>
@@ -75,7 +75,7 @@
               </nav> -->
               <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
                     
-                <a href="" class="nav-link with-sub"><i class="fa fa-window-restore" aria-hidden="true"></i>&nbsp;MIS</a>
+                <a  class="nav-link with-sub"><i class="fa fa-window-restore" aria-hidden="true"></i>&nbsp;MIS</a>
               </button>
               <mat-menu #menu="matMenu">
                 <button mat-menu-item>
@@ -95,7 +95,7 @@
             <li class="nav-item active show">
                 <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
                     
-                    <a href="" class="nav-link with-sub"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Reports</a>
+                    <a  class="nav-link with-sub"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;Reports</a>
                   </button>
                   <mat-menu #menu="matMenu">
                     <button mat-menu-item>
@@ -115,16 +115,16 @@
             <li class="nav-item active show">
                 <button mat-icon-button [matMenuTriggerFor]="menu2" aria-label="Example icon-button with a menu">
                     
-                    <a href="" class="nav-link with-sub"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;User Rights</a>
+                    <a  class="nav-link with-sub"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;User Rights</a>
                   </button>
                   <mat-menu #menu2="matMenu">
-                    <button mat-menu-item>
+                    <button mat-menu-item (click)="userGroup()">
                       <mat-icon>supervised_user_circle</mat-icon>
                       <span>User Group</span>
                     </button>
-                    <button mat-menu-item >
+                    <button mat-menu-item (click)="reseller()">
                       <mat-icon>people</mat-icon>
-                      <span>Users/Reseller</span>
+                      <span>Channel Partner</span>
                     </button>
                     <!-- <button mat-menu-item>
                       <mat-icon>notifications_off</mat-icon>
@@ -205,6 +205,175 @@
     </div><!-- az-header -->
 </ion-header>
 
-<ion-content>
-    
+<ion-content center text-center padding>
+  <h2>Channel Partner Creation</h2>
+  <hr class="mg-y-30">
+  <ion-card>
+    <ion-card-content>
+<form>
+    <ion-grid>
+        <ion-row center>
+              <ion-col>
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">Company name <ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" ></ion-input>
+    </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+        </ion-row>
+        <ion-row center>
+            <ion-col>
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">Branch<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" ></ion-input>
+    </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+  
+   <ion-col>
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">Vehicle Make<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" ></ion-input>
+    </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+  </ion-row>
+  <ion-row center>
+      <ion-col>
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">Vehicle Model<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" ></ion-input>
+    </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+ 
+      <ion-col>
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">Vehicle Number<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" ></ion-input>
+    </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+  </ion-row>
+  <ion-row center>
+      <ion-col>
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">CC/GVW<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input required type="text" ></ion-input>
+    </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+  
+      <ion-col>
+  <div class="form-group">
+      <ion-item>
+          <ion-label position="stacked">Year of Manufacturing<ion-text color="danger">*</ion-text></ion-label>
+          <ion-select interface="popover">
+            <ion-select-option value="2019">2019</ion-select-option>
+            <ion-select-option value="2018">2018</ion-select-option>
+            <ion-select-option value="2017">2017</ion-select-option>
+            <ion-select-option value="2016">2016</ion-select-option>
+            <ion-select-option value="2015">2015</ion-select-option>
+            <ion-select-option value="2014">2014</ion-select-option>
+          </ion-select>
+        </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+  </ion-row>
+  <ion-row center>
+      <ion-col>
+
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">Purchase Date<ion-text color="danger">*</ion-text></ion-label>
+      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+  </div><!-- form-group -->
+  </ion-col>
+ 
+      <ion-col>
+  <div class="form-group">
+    <ion-item>
+      <ion-label position="stacked">Permit Type<ion-text color="danger">*</ion-text></ion-label>
+      <ion-select interface="popover">
+        <ion-select-option value="nes">NES</ion-select-option>
+        <ion-select-option value="n64">Nintendo64</ion-select-option>
+        <ion-select-option value="ps">PlayStation</ion-select-option>
+        <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+        <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+        <ion-select-option value="snes">SNES</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  </ion-col>
+  </ion-row>
+  <ion-row center>
+      <ion-col>
+    <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Next Insurance Date<ion-text color="danger">*</ion-text></ion-label>
+          <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+      </div><!-- form-group -->
+      </ion-col>
+     
+          <ion-col>
+      <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Next Permit Date<ion-text color="danger">*</ion-text></ion-label>
+            <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+          </ion-item>
+        </div><!-- form-group -->
+        </ion-col>
+        </ion-row>
+        <ion-row center>
+            <ion-col>
+        <div class="form-group">
+            <ion-item>
+              <ion-label position="stacked">Next PUC Date<ion-text color="danger">*</ion-text></ion-label>
+              <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+            </ion-item>
+          </div><!-- form-group -->
+          </ion-col>
+          
+              <ion-col>
+          <div class="form-group">
+              <ion-item>
+                <ion-label position="stacked">Next Tax Token Date<ion-text color="danger">*</ion-text></ion-label>
+                <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+              </ion-item>
+            </div><!-- form-group -->
+            </ion-col>
+        </ion-row>
+            <ion-row center>
+                <ion-col>
+            <div class="form-group">
+                <ion-item>
+                  <ion-label position="stacked">Next Service Date<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                </ion-item>
+              </div><!-- form-group -->
+              </ion-col>
+             
+                  <ion-col>
+              <div class="form-group">
+                  <ion-item>
+                    <ion-label position="stacked">Next Oil Change Date<ion-text color="danger">*</ion-text></ion-label>
+                    <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                  </ion-item>
+                </div><!-- form-group -->
+                </ion-col>
+                </ion-row>
+            </ion-grid>
+            <ion-button  (click)="open(content)">Save</ion-button>
+</form>
+</ion-card-content>
+</ion-card>
+
 </ion-content>

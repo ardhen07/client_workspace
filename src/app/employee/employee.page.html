@@ -1,9 +1,272 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>employee</ion-title>
-  </ion-toolbar>
-</ion-header>
+    <!-- <ion-toolbar>
+      
+    </ion-toolbar> -->
+    <ion-title></ion-title>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content center text-center padding>
+    <h2>Create Employee</h2>
+    <hr class="mg-y-30">
+    <ion-card>
+      <ion-card-content>
+  <form>
+      <ion-grid>
+          <ion-row center>
+                <ion-col>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="stacked">Customer Name <ion-text color="danger">*</ion-text></ion-label>
+        <ion-select interface="popover">
+          <ion-select-option value="Type1">Type1</ion-select-option>
+          <ion-select-option value="Type2">Type2</ion-select-option>
+          
+        </ion-select>
+      </ion-item>
+    </div><!-- form-group -->
+    </ion-col>
+          </ion-row>
+   
+    <ion-row center>
+        <ion-col>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="stacked">First Name<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" ></ion-input>
+      </ion-item>
+    </div><!-- form-group -->
+    </ion-col>
+   
+        <ion-col>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="stacked">Last Name<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" ></ion-input>
+      </ion-item>
+    </div><!-- form-group -->
+    </ion-col>
+    </ion-row>
+    <ion-row center>
+        <ion-col>
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="stacked">Designation<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" ></ion-input>
+      </ion-item>
+    </div><!-- form-group -->
+    </ion-col>
+    
+        <ion-col>
+    <div class="form-group">
+            <ion-item>
+           
+                <ion-item>
+                  <ion-label position="stacked">Address Line 1<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required type="text" ></ion-input>
+                </ion-item>
+             
+          </ion-item>
+    </div><!-- form-group -->
+    </ion-col>
+    </ion-row>
+    <ion-row center>
+        <ion-col>
+  
+    <div class="form-group">
+      <ion-item>
+        <ion-label position="stacked">Address Line 2<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" ></ion-input>
+      </ion-item>
+    </div><!-- form-group -->
+    </ion-col>
+   
+        <ion-col>
+            <div class="form-group">
+                <ion-item>
+                  <ion-label position="stacked">City<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required type="text" ></ion-input>
+                </ion-item>
+              </div><!-- form-group -->
+    </ion-col>
+    </ion-row>
+    <ion-row center>
+        <ion-col>
+      <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Pin Code<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+        </ion-col>
+       
+            <ion-col>
+        <div class="form-group">
+            <ion-item>
+              <ion-label position="stacked">State<ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text" ></ion-input>
+            </ion-item>
+          </div><!-- form-group -->
+          </ion-col>
+          </ion-row>
+          <ion-row center>
+              <ion-col>
+          <div class="form-group">
+              <ion-item>
+                <ion-label position="stacked">Mobile No.<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" ></ion-input>
+              </ion-item>
+            </div><!-- form-group -->
+            </ion-col>
+            
+                <ion-col>
+            <div class="form-group">
+                <ion-item>
+                  <ion-label position="stacked">Alternate Number<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input required type="text" ></ion-input>
+                </ion-item>
+              </div><!-- form-group -->
+              </ion-col>
+          </ion-row>
+              <ion-row center>
+                  <ion-col>
+              <div class="form-group">
+                  <ion-item>
+                    <ion-label position="stacked">Email ID<ion-text color="danger">*</ion-text></ion-label>
+                    <ion-input required type="text" ></ion-input>
+                  </ion-item>
+                </div><!-- form-group -->
+                </ion-col>
+               
+                    <ion-col>
+                <div class="form-group">
+                    <ion-item>
+                      <ion-label position="stacked">Date of Birth<ion-text color="danger">*</ion-text></ion-label>
+                      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                    </ion-item>
+                  </div><!-- form-group -->
+                  </ion-col>
+                  </ion-row>
+  
+                  <ion-row center>
+                      <ion-col>
+                  <div class="form-group">
+                      <ion-item>
+                        <ion-label position="stacked">Date of Joining<ion-text color="danger">*</ion-text></ion-label>
+                        <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                      </ion-item>
+                    </div><!-- form-group -->
+                    </ion-col>
+                   
+                        <ion-col>
+                    <div class="form-group">
+                        <ion-item>
+                          <ion-label position="stacked">License No.<ion-text color="danger">*</ion-text></ion-label>
+                          <ion-input required type="text" ></ion-input>
+                        </ion-item>
+                      </div><!-- form-group -->
+                      </ion-col>
+                      </ion-row> 
+                      <ion-row center>
+                          <ion-col>
+                      <div class="form-group">
+                          <ion-item>
+                            <ion-label position="stacked">License Issued Date<ion-text color="danger">*</ion-text></ion-label>
+                            <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                          </ion-item>
+                        </div><!-- form-group -->
+                        </ion-col>
+                       
+                            <ion-col>
+                        
+                                <div class="form-group">
+                                    <ion-item>
+                                      <ion-label position="stacked">License Expiry Date<ion-text color="danger">*</ion-text></ion-label>
+                                      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                                    </ion-item>
+                                  </div><!-- form-group -->
+                         
+                          </ion-col>
+                          </ion-row> 
 
-<ion-content>
+                          <ion-row center>
+                              <ion-col>
+                          <div class="form-group">
+                              <ion-item>
+                                <ion-label position="stacked">Life Insurance No.<ion-text color="danger">*</ion-text></ion-label>
+                                <ion-input required type="text" ></ion-input>
+                              </ion-item>
+                            </div><!-- form-group -->
+                            </ion-col>
+                           
+                                <ion-col>
+                            
+                                    <div class="form-group">
+                                        <ion-item>
+                                          <ion-label position="stacked">Life Insurance Expiry Date<ion-text color="danger">*</ion-text></ion-label>
+                                          <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                                        </ion-item>
+                                      </div><!-- form-group -->
+                             
+                              </ion-col>
+                              </ion-row> 
+                              <ion-row center>
+                                  <ion-col>
+                              <div class="form-group">
+                                  <ion-item>
+                                    <ion-label position="stacked">Mediclaim No.<ion-text color="danger">*</ion-text></ion-label>
+                                    <ion-input required type="text" ></ion-input>
+                                  </ion-item>
+                                </div><!-- form-group -->
+                                </ion-col>
+                               
+                                    <ion-col>
+                                
+                                        <div class="form-group">
+                                            <ion-item>
+                                              <ion-label position="stacked">Mediclaim Expiry Date<ion-text color="danger">*</ion-text></ion-label>
+                                              <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+                                            </ion-item>
+                                          </div><!-- form-group -->
+                                 
+                                  </ion-col>
+                                  </ion-row> 
+                                  <ion-row center>
+                                      <ion-col>
+                                  <div class="form-group">
+                                      <ion-item>
+                                        <ion-label position="stacked">Default Vehicle No.<ion-text color="danger">*</ion-text></ion-label>
+                                        <ion-input required type="text" ></ion-input>
+                                      </ion-item>
+                                    </div><!-- form-group -->
+                                      </ion-col>
+                                      <ion-col>
+                                    <div class="form-group">
+                                        <ion-item>
+                                          <ion-label position="stacked">License to Drive<ion-text color="danger">*</ion-text></ion-label>
+                                          <ion-select interface="popover">
+                                              <ion-select-option value="Type1">Type1</ion-select-option>
+                                              <ion-select-option value="Type2">Type2</ion-select-option>
+                                              
+                                            </ion-select>
+                                        </ion-item>
+                                      </div><!-- form-group -->
+                                    </ion-col>
+                                   
+                                      
+                                      </ion-row> 
 
-</ion-content>
+
+              </ion-grid>
+              <ion-button  (click)="open(content)">Save</ion-button>
+  </form>
+  </ion-card-content>
+  </ion-card>
+  
+  </ion-content>
+  
+  

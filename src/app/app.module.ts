@@ -21,7 +21,7 @@ import {NgbModule,NgbModalModule,NgbDatepickerModule} from '@ng-bootstrap/ng-boo
     BrowserAnimationsModule,
     NgbModule,
     NgbModalModule,
-   
+    
     NgbDatepickerModule,],
 
   providers: [

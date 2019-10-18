@@ -11,7 +11,7 @@ import { MatInputModule, MatPaginatorModule,
   MatSortModule, MatTableModule } from "@angular/material";
   import {MatIconModule} from '@angular/material/icon';
   import {MatMenuModule} from '@angular/material/menu';
-  import { HeaderPage } from '../common/header/header.page';
+  import { HeaderPageModule } from '../common/header/header.module';
 const routes: Routes = [
   {
     path: '',
@@ -32,11 +32,15 @@ const routes: Routes = [
     MatIconModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-   
+    
     RouterModule.forChild(routes)
   ],
-  exports:[HeaderPage],
-  entryComponents: [HeaderPage],
-  declarations: [VehicleInfoPage,HeaderPage]
+  exports:[],
+  entryComponents: [],
+  declarations: [VehicleInfoPage]
 })
-export class VehicleInfoPageModule {}
+export class VehicleInfoPageModule {
+
+
+  
+}
