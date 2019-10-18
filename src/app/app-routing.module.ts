@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', redirectTo: 'start-app', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'vehicle-info', loadChildren: './vehicle-info/vehicle-info.module#VehicleInfoPageModule' },
   { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' },
@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'reseller', loadChildren: './reseller/reseller.module#ResellerPageModule' },
   { path: 'account-settings', loadChildren: './account-settings/account-settings.module#AccountSettingsPageModule' },
   { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
+  { path: 'start-app', loadChildren: './start-app/start-app.module#StartAppPageModule' },
 ];
 
 @NgModule({
