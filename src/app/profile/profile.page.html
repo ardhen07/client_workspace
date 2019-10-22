@@ -1,145 +1,176 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="az-content-body pd-lg-l-40 d-flex flex-column">
-    <div class="az-content-breadcrumb">
-      <span>Components</span>
-      <span>Forms</span>
-      <span>Form Wizards</span>
-    </div>
-    <h2 class="az-content-title">Form Wizards</h2>
-
-    <div class="az-content-label mg-b-5">Basic Content Wizard</div>
-    <p class="mg-b-20">Below is an example of a basic horizontal form wizard.</p>
-
-    <div id="wizard1">
-      <h3>Personal Information</h3>
-      <section>
-        <p class="mg-b-0">Try the keyboard navigation by clicking arrow left or right!</p>
-      </section>
-      <h3>Billing Information</h3>
-      <section>
-        <p class="mg-b-0">Wonderful transition effects.</p>
-      </section>
-      <h3>Payment Details</h3>
-      <section>
-        <p class="mg-b-0">The next and previous buttons help you to navigate through your content.</p>
-      </section>
-    </div>
-
-    <hr class="mg-y-30 mg-lg-y-50 bd-transparent">
-
-    <div class="az-content-label mg-b-5">Basic Wizard With Validation</div>
-    <p class="mg-b-20">A basic form wizard with form validation using Parsley js form validation plugin.</p>
-
-    <div id="wizard2">
-      <h3>Personal Information</h3>
-      <section>
-        <p class="mg-b-20">Try the keyboard navigation by clicking arrow left or right!</p>
-
-        <div class="row row-sm">
-          <div class="col-md-5 col-lg-4">
-            <label class="form-control-label">Firstname: <span class="tx-danger">*</span></label>
-            <input id="firstname" class="form-control" name="firstname" placeholder="Enter firstname" type="text" required>
-          </div><!-- col -->
-          <div class="col-md-5 col-lg-4 mg-t-20 mg-md-t-0">
-            <label class="form-control-label">Lastname: <span class="tx-danger">*</span></label>
-            <input id="lastname" class="form-control" name="lastname" placeholder="Enter lastname" type="text" required>
-          </div><!-- col -->
-        </div><!-- row -->
-      </section>
-      <h3>Billing Information</h3>
-      <section>
-        <p>Wonderful transition effects.</p>
-        <div class="form-group wd-xs-300">
-          <label class="form-control-label">Email: <span class="tx-danger">*</span></label>
-          <input id="email" class="form-control" name="email" placeholder="Enter email address" type="email" required>
-        </div><!-- form-group -->
-      </section>
-      <h3>Payment Details</h3>
-      <section>
-        <p>The next and previous buttons help you to navigate through your content.</p>
-      </section>
-    </div>
-
-    <hr class="mg-y-30 mg-lg-y-50 bd-transparent">
-
-    <div class="az-content-label mg-b-5">Vertical Orientation Wizard</div>
-    <p class="mg-b-20">A basic content wizard with vertical orientation.</p>
-
-    <div id="wizard3">
-      <h3>Personal Information</h3>
-      <section>
-        <p>Try the keyboard navigation by clicking arrow left or right!</p>
-      </section>
-      <h3>Billing Information</h3>
-      <section>
-        <p>Wonderful transition effects.</p>
-      </section>
-      <h3>Payment Details</h3>
-      <section>
-        <p>The next and previous buttons help you to navigate through your content.</p>
-      </section>
-    </div>
-
-    <div class="ht-40"></div>
-
+ 
+    <!-- <ion-toolbar>
+      
+    </ion-toolbar> -->
    
-  </div><!-- az-content-body -->
-  <script>
-    $(function(){
-      'use strict'
-  
-      $('#wizard1').steps({
-        headerTag: 'h3',
-        bodyTag: 'section',
-        autoFocus: true,
-        titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>'
-      });
-  
-      $('#wizard2').steps({
-        headerTag: 'h3',
-        bodyTag: 'section',
-        autoFocus: true,
-        titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
-        onStepChanging: function (event, currentIndex, newIndex) {
-          if(currentIndex < newIndex) {
-            // Step 1 form validation
-            if(currentIndex === 0) {
-              var fname = $('#firstname').parsley();
-              var lname = $('#lastname').parsley();
-  
-              if(fname.isValid() && lname.isValid()) {
-                return true;
-              } else {
-                fname.validate();
-                lname.validate();
-              }
-            }
-  
-            // Step 2 form validation
-            if(currentIndex === 1) {
-              var email = $('#email').parsley();
-              if(email.isValid()) {
-                return true;
-              } else { email.validate(); }
-            }
-          // Always allow step back to the previous step even if the current step is not valid.
-          } else { return true; }
-        }
-      });
-  
-      $('#wizard3').steps({
-        headerTag: 'h3',
-        bodyTag: 'section',
-        autoFocus: true,
-        titleTemplate: '<span class="number">#index#</span> <span class="title">#title#</span>',
-        stepsOrientation: 1
-      });
-    });
-  </script>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+
+          </ion-col>
+          <ion-col>
+            <div>
+              <h2>My Profile</h2>
+            </div>
+      <mat-vertical-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Personal Information</ng-template>
+
+       
+              <ion-item>
+                  <input  matInput  type="text" ng-disabled="redirect==false"  placeholder="Registration Number" formControlName="firstCtrl" required>
+              </ion-item>
+            
+        
+           
+         
+        <mat-form-field>
+          <input matInput  type="text" placeholder="Registration Location" formControlName="firstCtrl" required>
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        <!-- <mat-form-field>
+            <input matInput formControlName="firstCtrl" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+          </mat-form-field> -->
+        
+        <div>
+            <ion-button (click)="goForward(stepper)" type="button">Next</ion-button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Your Car detail</ng-template>
+        <mat-form-field>
+            <mat-label>Make</mat-label>
+            <select matNativeControl required>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </mat-form-field>
+          <mat-form-field>
+              <mat-label>Model</mat-label>
+              <select matNativeControl required>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+              </select>
+            </mat-form-field>
+          <mat-form-field>
+              <mat-label>Variant</mat-label>
+              <select matNativeControl required>
+                <option value="Sx vt vt">Sx vt vt</option>
+                <option value="Vt vt">Vt vt</option>
+              </select>
+            </mat-form-field>
+          <mat-form-field>
+              <mat-label>Cubic Capacity</mat-label>
+              <select matNativeControl required>
+                <option value="volvo">1000 cc</option>
+                <option value="saab">2000 cc</option>
+               
+              </select>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Fuel Type</mat-label>
+                <select matNativeControl required>
+                  <option value="Diesel">Diesel</option>
+                  <option value="Petrol">Petrol</option>
+                  
+                </select>
+              </mat-form-field>
+        <mat-form-field>
+          <mat-label>Manufacturing Year</mat-label>
+          <select matNativeControl required>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+          </select>
+        </mat-form-field>
+
+          
+
+        <div>
+            <ion-button (click)="goBack(stepper)" type="button">Back</ion-button>
+            <ion-button (click)="goForward(stepper)" type="button">Next</ion-button>
+         </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+      <ng-template matStepLabel>Previous Policy Details</ng-template>
+     
+      <mat-form-field>
+          <mat-label>Claimed Previous Year?</mat-label>
+          <select matNativeControl required>
+            <option value="2019">Yes</option>
+            <option value="2018">No</option>
+          
+          </select>
+        </mat-form-field>
+          <mat-form-field>
+              <mat-label>Select Previous NCB</mat-label>
+              <select matNativeControl required>
+                <option value="2019">0%</option>
+                <option value="2018">20%</option>
+                <option value="2017">50%</option>
+                <option value="2016">90%</option>
+              </select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Policy Type</mat-label>
+                <select matNativeControl required>
+                  <option value="2019">Package</option>
+                  <option value="2018">Liability only</option>
+                  <option value="2017">OD Cover Only</option>
+                  <option value="2016">New Vehicle</option>
+                </select>
+              </mat-form-field>
+       
+      <div>
+          <ion-button (click)="goBack(stepper)" type="button">Back</ion-button>
+          <ion-button (click)="goForward(stepper)" type="button">Next</ion-button>
+       </div>
+       </form>
+    </mat-step>
+    
+    <mat-step [stepControl]="fourthFormGroup">
+        <form [formGroup]="fourthFormGroup">
+      <ng-template matStepLabel>Save your quote now</ng-template>
+      <mat-form-field>
+           
+          <input  matInput  type="text" ng-disabled="redirect==false"  placeholder="Lead Name" formControlName="fourthCtrl" required>
+        </mat-form-field>
+      <div>
+          <ion-button (click)="goBack(stepper)" type="button">Back</ion-button>
+          <ion-button (click)="goPrivateCarDetails()" type="button">Done</ion-button>
+       </div>
+       </form>
+    </mat-step>
+  </mat-vertical-stepper>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 </ion-content>

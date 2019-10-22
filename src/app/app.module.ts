@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgbModule,NgbModalModule,NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { MatFormFieldModule, MatInputModule,MatRadioModule,MatNativeDateModule } from '@angular/material';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,7 +22,11 @@ import {NgbModule,NgbModalModule,NgbDatepickerModule} from '@ng-bootstrap/ng-boo
     BrowserAnimationsModule,
     NgbModule,
     NgbModalModule,
-    
+    MatFormFieldModule,
+    MatInputModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
     NgbDatepickerModule,],
 
   providers: [
