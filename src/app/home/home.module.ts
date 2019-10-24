@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import {MatMenuModule} from '@angular/material/menu';
 import { HomePage } from './home.page';
 import {MatIconModule} from '@angular/material/icon';
-import { HeaderPage } from '../common/header/header.page';
 
 @NgModule({
   imports: [
@@ -23,9 +22,9 @@ import { HeaderPage } from '../common/header/header.page';
       }
     ])
   ],
-  exports: [HeaderPage],
-  entryComponents: [HeaderPage],
-  declarations: [HomePage,HeaderPage]
+  exports: [],
+  entryComponents: [],
+  declarations: [HomePage,]
 })
 export class HomePageModule {
 

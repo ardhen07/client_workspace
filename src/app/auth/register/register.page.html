@@ -5,53 +5,144 @@
   <ion-title></ion-title>
 </ion-header>
 
-<ion-content>
-  <div class="az-signup-wrapper">
-    <div class="az-column-signup-left">
-      <div>
-        <p><img src="../assets/img/logo.jpg" width="100px" height="100px"></p>
-        <h1 class="az-logo">GO-<span>CRM</span></h1>
-        <h5>Responsive Modern Dashboard &amp; Admin Template</h5>
-        <p>We are excited to launch our new company and product Azia. After being featured in too many magazines to mention and having created an online stir, we know that BootstrapDash is going to be big. We also hope to win Startup Fictional Business of the Year this year.</p>
-        <p>Browse our site and see for yourself why you need Azia.</p>
-        <a href="index.html" class="btn btn-outline-indigo">Learn More</a>
-      </div>
-    </div><!-- az-column-signup-left -->
-    <div class="az-column-signup">
-      <h1 class="az-logo">GO-<span>CRM</span></h1>
-      <div class="az-signup-header">
-        <h2>Get Started</h2>
-        <h4>It's free to signup and only takes a minute.</h4>
+<ion-header>
+    <!-- <ion-toolbar>
+      
+    </ion-toolbar> -->
+    
+    <ion-toolbar>
+        <ion-title>GO-CRM</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content padding center text-center>
+    <h2>Company Registration</h2>
+    <hr class="mg-y-30">
+  <form action="/register">
+<ion-card>
+    <ion-card-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Full Name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Email Id <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="password" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Retype-Password<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="password" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Company Name<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Address Line 1<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Address Line 2<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">State<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">City<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Pin code<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Trade License No.<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+      <ion-col>
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Company PAN<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-card-content>
+</ion-card>
 
-        <form action="/register">
-          <div class="form-group">
-            <ion-item>
-              <ion-label position="stacked">Name <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="text" ></ion-input>
-            </ion-item>
-          </div><!-- form-group -->
-          <div class="form-group">
-            <ion-item>
-              <ion-label position="stacked">Email <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="text" ></ion-input>
-            </ion-item>
-          </div><!-- form-group -->
-          <div class="form-group">
-            <ion-item>
-              <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="password" ></ion-input>
-            </ion-item>
-          </div><!-- form-group -->
-          <button class="btn btn-az-primary btn-block">Create Account</button>
+  <ion-button  (click)="register()">Create Account</ion-button>
+          <!-- <button class="btn btn-az-primary btn-block">Create Account</button>
           <div class="row row-xs">
             <div class="col-sm-6"><button class="btn btn-block"><i class="fab fa-facebook-f"></i> Signup with Facebook</button></div>
             <div class="col-sm-6 mg-t-10 mg-sm-t-0"><button class="btn btn-primary btn-block"><i class="fab fa-twitter"></i> Signup with Twitter</button></div>
-          </div><!-- row -->
+          </div> -->
+          <!-- row -->
         </form>
-      </div><!-- az-signup-header -->
-      <div class="az-signup-footer">
-        <p>Already have an account? <a href="/login">Sign In</a></p>
-      </div><!-- az-signin-footer -->
-    </div><!-- az-column-signup -->
-  </div><!-- az-signup-wrapper -->
+     
 </ion-content>

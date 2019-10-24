@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
 
   loaderToShow: any;
-  constructor(public loadingController: LoadingController,private router: Router) { }
+  constructor(public loadingController: LoadingController,private router: Router) {
+    
+   }
 
   ngOnInit() {
   }
@@ -24,7 +26,7 @@ export class LoginPage implements OnInit {
 
   //   console.log('Loading dismissed!');
   // }
-  async presentLoading()  {
+  async signIn()  {
     this.loaderToShow = this.loadingController.create({
       message: 'Please Wait..',
       translucent: true,
@@ -39,10 +41,24 @@ export class LoginPage implements OnInit {
     });
     this.hideLoader();
   }
+  async signUp()  {
+    this.loaderToShow = this.loadingController.create({
+      message: 'Please Wait..',
+      translucent: true,
+      animated:true,
+    }).then((res) => {
+      res.present();
   
+      res.onDidDismiss().then((dis) => {
+        console.log('Loading complete..');
+        this.router.navigate(['/register']);
+      });
+    });
+    this.hideLoader();
+  }
   hideLoader() {
     setTimeout(() => {
       this.loadingController.dismiss();
-    }, 4000);
+    }, 2000);
   }
 }

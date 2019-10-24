@@ -4,40 +4,68 @@
   </ion-toolbar> -->
 </ion-header>
 
-<ion-content padding>
-  <div class="az-signin-wrapper">
-    <div class="az-card-signin">
-      <h1 class="az-logo">GO-<span>CRM</span></h1>
-      <div class="az-signin-header">
-        <h2>Welcome back!</h2>
-        <h4>Please sign in to continue</h4>
+<ion-content padding center text-center>
+ 
 
-        <form action="/home">
-          <div class="form-group">
-            <ion-item>
-              <ion-label position="floating">Company Id <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="text"></ion-input>
-            </ion-item>
-          </div><!-- form-group -->
-          <div class="form-group">
-            <ion-item>
-              <ion-label position="floating">Email <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="text"></ion-input>
-            </ion-item>
-          </div><!-- form-group -->
-          <div class="form-group">
-            <ion-item>
-              <ion-label position="floating">Password <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="password"></ion-input>
-            </ion-item>
-          </div><!-- form-group -->
-          <ion-button (click)="presentLoading()">Sign In</ion-button>
-        </form>
-      </div><!-- az-signin-header -->
-      <div class="az-signin-footer">
-        <p><a href="#">Forgot password?</a></p>
-        <p>Don't have an account? <a href="/register">Create an Account</a></p>
-      </div><!-- az-signin-footer -->
-    </div><!-- az-card-signin -->
-  </div><!-- az-signin-wrapper -->
+  <div class="az-signup-wrapper" style="padding-top: 20px;">
+      <div class="az-column-signup-left">
+        <div>
+          <p><img src="assets/img/logo.jpg" width="100px" height="100px"></p>
+          <!-- <h1 class="az-logo">GO-<span>CRM</span></h1> -->
+          <!-- <h5>Responsive Modern Dashboard &amp; Admin Template</h5>
+          <p>We are excited to launch our new company and product Azia. After being featured in too many magazines to mention and having created an online stir, we know that BootstrapDash is going to be big. We also hope to win Startup Fictional Business of the Year this year.</p>
+          <p>Browse our site and see for yourself why you need Azia.</p>
+          <a href="index.html" class="btn btn-outline-indigo">Learn More</a> -->
+          <img src="assets/img/3.jpg"  style="opacity: 0.4;">
+        </div>
+      </div><!-- az-column-signup-left -->
+      <div class="az-column-signup">
+        <h1 class="az-logo">GO-<span>CRM</span></h1>
+        <h3> <ion-icon name="unlock"></ion-icon>Please Enter Login Details</h3>
+        <div class="az-signup-header" style="padding-top: 20px;">
+          
+          <!-- <h4>It's free to signup and only takes a minute.</h4> -->
+  
+          <form action="/home">
+         
+            <div class="form-group">
+                <ion-item>
+                  <ion-label position="stacked"><ion-icon name="contact"></ion-icon> User Type<ion-text color="danger">*</ion-text></ion-label>
+                  <ion-select interface="popover">
+                      <ion-select-option value="admin">Admin</ion-select-option>
+                      <ion-select-option value="channel_partner">Channel Partner</ion-select-option>
+                    </ion-select>
+                </ion-item>
+              </div><!-- form-group -->
+              <div class="form-group">
+                  <ion-item>
+                    <ion-label position="stacked"><i class="fa fa-id-card" aria-hidden="true"></i> Company Id<ion-text color="danger">*</ion-text></ion-label>
+                    <ion-input required type="text" ></ion-input>
+                  </ion-item>
+                </div><!-- form-group -->
+            <div class="form-group">
+              <ion-item>
+                <ion-label position="stacked"><i class="fa fa-envelope" aria-hidden="true"></i> Email <ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" ></ion-input>
+              </ion-item>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <ion-item>
+                <ion-label position="stacked"><i class="fa fa-key" aria-hidden="true"></i> Password<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="password" ></ion-input>
+              </ion-item>
+            </div><!-- form-group -->
+            <ion-button expand="block"  (click)="signIn()" >Login</ion-button>
+            <!-- <div class="row row-xs">
+              <div class="col-sm-6"><button class="btn btn-block"><i class="fab fa-facebook-f"></i> Signin with Facebook</button></div>
+              <div class="col-sm-6 mg-t-10 mg-sm-t-0"><button class="btn btn-primary btn-block"><i class="fab fa-twitter"></i> Signin with Twitter</button></div>
+            </div> -->
+            <!-- row -->
+          </form>
+        </div><!-- az-signup-header -->
+        <div class="az-signup-footer">
+          <p center>Don't have an account? <ion-button fill="outline" (click)="signUp()">Sign Up</ion-button></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-column-signup -->
+    </div><!-- az-signup-wrapper -->
 </ion-content>

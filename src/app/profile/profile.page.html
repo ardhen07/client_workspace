@@ -1,20 +1,36 @@
 <ion-header>
- 
+  
     <!-- <ion-toolbar>
       
     </ion-toolbar> -->
    
-    <ion-toolbar>
+    <ion-toolbar class="az-header">
+      <ion-title><h2>GO-CRM</h2></ion-title>
       <ion-buttons slot="start">
         <ion-back-button defaultHref="home"></ion-back-button>
       </ion-buttons>
     </ion-toolbar>
+    
   </ion-header>
 <ion-content>
+  
     <ion-grid>
         <ion-row>
           <ion-col>
-
+              <img src="assets/img/1.png" style="opacity: 0.6;">
+            
+            
+              <!-- <ion-card-content>
+                <ion-card-title>
+                  Nine Inch Nails Live
+                  </ion-card-title>
+                <p>
+                  The most popular industrial group ever, and largely
+                  responsible for bringing the music to a mass audience.
+                </p>
+              </ion-card-content> -->
+              <!-- <ion-card>
+            </ion-card> -->
           </ion-col>
           <ion-col>
             <div>
@@ -23,32 +39,37 @@
       <mat-vertical-stepper [linear]="isLinear" #stepper>
         <mat-step [stepControl]="firstFormGroup">
           <form [formGroup]="firstFormGroup">
-            <ng-template matStepLabel>Personal Information</ng-template>
-
-       
+            <ng-template matStepLabel>Basic Information</ng-template>
+            <div class="form-group">
               <ion-item>
-                  <input  matInput  type="text" ng-disabled="redirect==false"  placeholder="Registration Number" formControlName="firstCtrl" required>
+                <ion-label position="stacked">First Name<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" ></ion-input>
               </ion-item>
-            
+            </div><!-- form-group -->
         
-           
-         
-        <mat-form-field>
-          <input matInput  type="text" placeholder="Registration Location" formControlName="firstCtrl" required>
-        </mat-form-field>
-        
-        <mat-form-field class="example-full-width">
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-            <mat-datepicker-toggle matSuffix [for]="picker">
-              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-            </mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-        <!-- <mat-form-field>
-            <input matInput formControlName="firstCtrl" placeholder="Choose a date">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
-          </mat-form-field> -->
+            <div class="form-group">
+              <ion-item>
+                <ion-label position="stacked">Last Name<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" ></ion-input>
+              </ion-item>
+            </div><!-- form-group --><div class="form-group">
+              <ion-item>
+                <ion-label position="stacked">Last Name<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" ></ion-input>
+              </ion-item>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <ion-item>
+                <ion-label position="stacked">Date of Birth<ion-text color="danger">*</ion-text></ion-label>
+                <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+              </ion-item>
+            </div><!-- form-group -->
+            <div class="form-group">
+              <ion-item>
+                <ion-label position="stacked">Email Id<ion-text color="danger">*</ion-text></ion-label>
+                <ion-input required type="text" ></ion-input>
+              </ion-item>
+            </div><!-- form-group -->
         
         <div>
             <ion-button (click)="goForward(stepper)" type="button">Next</ion-button>
@@ -57,61 +78,50 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Your Car detail</ng-template>
-        <mat-form-field>
-            <mat-label>Make</mat-label>
-            <select matNativeControl required>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>
-          </mat-form-field>
-          <mat-form-field>
-              <mat-label>Model</mat-label>
-              <select matNativeControl required>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-            </mat-form-field>
-          <mat-form-field>
-              <mat-label>Variant</mat-label>
-              <select matNativeControl required>
-                <option value="Sx vt vt">Sx vt vt</option>
-                <option value="Vt vt">Vt vt</option>
-              </select>
-            </mat-form-field>
-          <mat-form-field>
-              <mat-label>Cubic Capacity</mat-label>
-              <select matNativeControl required>
-                <option value="volvo">1000 cc</option>
-                <option value="saab">2000 cc</option>
-               
-              </select>
-            </mat-form-field>
-
-            <mat-form-field>
-                <mat-label>Fuel Type</mat-label>
-                <select matNativeControl required>
-                  <option value="Diesel">Diesel</option>
-                  <option value="Petrol">Petrol</option>
-                  
-                </select>
-              </mat-form-field>
-        <mat-form-field>
-          <mat-label>Manufacturing Year</mat-label>
-          <select matNativeControl required>
-            <option value="2019">2019</option>
-            <option value="2018">2018</option>
-            <option value="2017">2017</option>
-            <option value="2016">2016</option>
-          </select>
-        </mat-form-field>
-
-          
-
+        <ng-template matStepLabel>Contact Details</ng-template>
+      
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Address Line 1<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Address Line 2<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">City<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Pin Code<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">State<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Mobile No.<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
+        <div class="form-group">
+          <ion-item>
+            <ion-label position="stacked">Alternnet Mobile no.<ion-text color="danger">*</ion-text></ion-label>
+            <ion-input required type="text" ></ion-input>
+          </ion-item>
+        </div><!-- form-group -->
         <div>
             <ion-button (click)="goBack(stepper)" type="button">Back</ion-button>
             <ion-button (click)="goForward(stepper)" type="button">Next</ion-button>
@@ -120,34 +130,30 @@
     </mat-step>
     <mat-step [stepControl]="thirdFormGroup">
         <form [formGroup]="thirdFormGroup">
-      <ng-template matStepLabel>Previous Policy Details</ng-template>
+      <ng-template matStepLabel>Upload Documents</ng-template>
      
-      <mat-form-field>
-          <mat-label>Claimed Previous Year?</mat-label>
-          <select matNativeControl required>
-            <option value="2019">Yes</option>
-            <option value="2018">No</option>
-          
-          </select>
-        </mat-form-field>
-          <mat-form-field>
-              <mat-label>Select Previous NCB</mat-label>
-              <select matNativeControl required>
-                <option value="2019">0%</option>
-                <option value="2018">20%</option>
-                <option value="2017">50%</option>
-                <option value="2016">90%</option>
-              </select>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Policy Type</mat-label>
-                <select matNativeControl required>
-                  <option value="2019">Package</option>
-                  <option value="2018">Liability only</option>
-                  <option value="2017">OD Cover Only</option>
-                  <option value="2016">New Vehicle</option>
-                </select>
-              </mat-form-field>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Document Type <ion-text color="danger">*</ion-text></ion-label>
+          <ion-select interface="popover">
+            <ion-select-option value="Type1">Type1</ion-select-option>
+            <ion-select-option value="Type2">Type2</ion-select-option>
+            
+          </ion-select>
+        </ion-item>
+      </div><!-- form-group -->
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Document Name<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Upload Document<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="file" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
        
       <div>
           <ion-button (click)="goBack(stepper)" type="button">Back</ion-button>
@@ -158,11 +164,37 @@
     
     <mat-step [stepControl]="fourthFormGroup">
         <form [formGroup]="fourthFormGroup">
-      <ng-template matStepLabel>Save your quote now</ng-template>
-      <mat-form-field>
-           
-          <input  matInput  type="text" ng-disabled="redirect==false"  placeholder="Lead Name" formControlName="fourthCtrl" required>
-        </mat-form-field>
+      <ng-template matStepLabel>Company Details</ng-template>
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Company Name<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Branch<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group --> 
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Partner Type<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Designation<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
+      <div class="form-group">
+        <ion-item>
+          <ion-label position="stacked">Valid From<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" ></ion-input>
+        </ion-item>
+      </div><!-- form-group -->
       <div>
           <ion-button (click)="goBack(stepper)" type="button">Back</ion-button>
           <ion-button (click)="goPrivateCarDetails()" type="button">Done</ion-button>
